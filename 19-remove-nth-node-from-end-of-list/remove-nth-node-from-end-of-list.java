@@ -18,16 +18,13 @@ class Solution {
         }
         if(k==n)
         return head.next;
-        // k=k-n;
         curr=head;
         int count=1;
         while(count!=k-n){
             curr=curr.next;
             count++;
         }
-        if(curr.next!=null){
-            curr.next=curr.next.next;
-        }
+        curr.next=curr.next.next;
         return head;
     }
 }
